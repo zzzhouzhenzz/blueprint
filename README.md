@@ -11,6 +11,17 @@ This plugin gives you the two sides of that workflow:
 - `/blueprint:write` — point cc at the current project and it produces a `blueprint.md`.
 - `/blueprint:build` — point cc at a `blueprint.md` (local path or URL) and it executes it end-to-end.
 
+## Install
+
+Paste this into a Claude Code session:
+
+```
+Install the blueprint plugin from https://github.com/zzzhouzhenzz/blueprint —
+add it as a marketplace and install it so I can use /blueprint:write and /blueprint:build.
+```
+
+cc will run the `/plugin marketplace add` and `/plugin install` steps for you.
+
 ## Commands
 
 ```
@@ -38,17 +49,6 @@ This plugin gives you the two sides of that workflow:
 ```
 
 Files are embedded verbatim, no placeholders — the whole point is reproducibility without the original repo.
-
-## Install
-
-Paste this into a Claude Code session:
-
-```
-Install the blueprint plugin from https://github.com/zzzhouzhenzz/blueprint —
-add it as a marketplace and install it so I can use /blueprint:write and /blueprint:build.
-```
-
-cc will run the `/plugin marketplace add` and `/plugin install` steps for you.
 
 ## Design notes
 
