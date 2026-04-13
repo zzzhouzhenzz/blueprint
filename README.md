@@ -41,12 +41,14 @@ Files are embedded verbatim, no placeholders — the whole point is reproducibil
 
 ## Install
 
-In Claude Code:
+Paste this into a Claude Code session:
 
 ```
-/plugin marketplace add zzzhouzhenzz/blueprint
-/plugin install blueprint@blueprint-marketplace
+Install the blueprint plugin from https://github.com/zzzhouzhenzz/blueprint —
+add it as a marketplace and install it so I can use /blueprint:write and /blueprint:build.
 ```
+
+cc will run the `/plugin marketplace add` and `/plugin install` steps for you.
 
 ## Design notes
 
