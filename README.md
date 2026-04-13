@@ -8,23 +8,23 @@ A **blueprint** is a single `blueprint.md` file that contains everything another
 
 This plugin gives you the two sides of that workflow:
 
-- `/blueprint-write` — point cc at the current project and it produces a `blueprint.md`.
-- `/blueprint-build` — point cc at a `blueprint.md` (local path or URL) and it executes it end-to-end.
+- `/blueprint:write` — point cc at the current project and it produces a `blueprint.md`.
+- `/blueprint:build` — point cc at a `blueprint.md` (local path or URL) and it executes it end-to-end.
 
 ## Commands
 
 ```
-/blueprint-write                 # write ./blueprint.md for the current project
-/blueprint-write ./docs/bp.md    # custom output path
+/blueprint:write                 # write ./blueprint.md for the current project
+/blueprint:write ./docs/bp.md    # custom output path
 
-/blueprint-build                 # build from ./blueprint.md
-/blueprint-build ./docs/bp.md    # from a path
-/blueprint-build https://...     # from a URL (raw markdown)
+/blueprint:build                 # build from ./blueprint.md
+/blueprint:build ./docs/bp.md    # from a path
+/blueprint:build https://...     # from a URL (raw markdown)
 ```
 
 ## Blueprint shape
 
-`/blueprint-write` emits this structure — and `/blueprint-build` expects it:
+`/blueprint:write` emits this structure — and `/blueprint:build` expects it:
 
 ```
 # Blueprint — build <project> from scratch
@@ -41,17 +41,15 @@ Files are embedded verbatim, no placeholders — the whole point is reproducibil
 
 ## Install
 
-```bash
-git clone https://github.com/zzzhouzhenzz/blueprint.git ~/code/blueprint
-~/code/blueprint/install.sh
+In Claude Code:
+
 ```
-
-Symlinks `commands/*.md` into `~/.claude/commands/` so `git pull` picks up updates.
-
-Uninstall: `rm ~/.claude/commands/{blueprint-write,blueprint-build}.md`.
+/plugin marketplace add zzzhouzhenzz/blueprint
+/plugin install blueprint@blueprint-marketplace
+```
 
 ## Design notes
 
-- Pure slash commands. No hooks, no MCP, no plugin wrapper, no namespace prefix in the palette.
-- `/blueprint-build` runs verification after writing files; won't declare done with failing checks.
+- Ships as a proper cc plugin with a marketplace manifest. Commands appear as `/blueprint:write` and `/blueprint:build`.
+- `/blueprint:build` runs verification after writing files; won't declare done with failing checks.
 - Built to be boring: if a blueprint says "7 files", it makes exactly 7.

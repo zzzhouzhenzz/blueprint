@@ -73,7 +73,7 @@ Your deliverable is the blueprint file. Nothing else.
 
 7. **Include verification steps** in §4 that are specific to this project, not generic. If the project is a CLI, show expected output for a real invocation. If it's a library, show a minimal usage example that should work. If it has a UI, describe what the user should see.
 
-8. **Confirm to the user** with the path of the generated blueprint and one sentence: "Share this with another cc using `/blueprint-build <path>` (or paste the contents and say 'follow this blueprint')."
+8. **Confirm to the user** with the path of the generated blueprint and one sentence: "Share this with another cc using `/blueprint:build <path>` (or paste the contents and say 'follow this blueprint')."
 
 ## Rules
 

@@ -1,0 +1,15 @@
+{
+  "name": "blueprint-marketplace",
+  "description": "Marketplace for blueprint — capture and rebuild projects from a single blueprint.md",
+  "owner": {
+    "name": "zhouzhen24"
+  },
+  "plugins": [
+    {
+      "name": "blueprint",
+      "description": "Capture a project as a reproducible blueprint.md and rebuild from it.",
+      "version": "0.1.0",
+      "source": "./"
+    }
+  ]
+}

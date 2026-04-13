@@ -1,0 +1,12 @@
+{
+  "name": "blueprint",
+  "description": "Capture a project as a reproducible blueprint.md and rebuild from it. Commands: /blueprint:write, /blueprint:build.",
+  "version": "0.1.0",
+  "author": {
+    "name": "zhouzhen24"
+  },
+  "homepage": "https://github.com/zzzhouzhenzz/blueprint",
+  "repository": "https://github.com/zzzhouzhenzz/blueprint",
+  "license": "MIT",
+  "keywords": ["blueprint", "scaffolding", "reproducibility", "automation"]
+}
